@@ -1,7 +1,9 @@
 package com.thruman.service.impl;
 
+import com.thruman.dao.cluster.CAddressMapper;
 import com.thruman.dao.cluster.OrderMapper;
 import com.thruman.dao.master.AccountMapper;
+import com.thruman.dao.master.MAddressMapper;
 import com.thruman.pojo.Account;
 import com.thruman.pojo.Order;
 import com.thruman.service.MutilService;
@@ -18,8 +20,15 @@ public class MutilServiceImpl implements MutilService{
     @Resource
     OrderMapper orderMapper;
 
+    @Resource
+    CAddressMapper cAddressMapper;
+    @Resource
+    MAddressMapper mAddressMapper;
+
+
 
     @Transactional
+    @Override
     public void test() {
         Account account = new Account();
         account.setBalance(12312l);
@@ -33,4 +42,14 @@ public class MutilServiceImpl implements MutilService{
         order.setCreateTime(new Date());
         orderMapper.insert(order);
     }
+
+
+    @Override
+    public void met(){
+        cAddressMapper.select();
+        mAddressMapper.insert();
+    }
+
+
+
 }
