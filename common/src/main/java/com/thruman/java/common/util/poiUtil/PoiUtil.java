@@ -219,19 +219,19 @@ public class PoiUtil {
 
     public static void main(String[] args) {
 
-//        LinkedHashMap<String,String> map = new LinkedHashMap<>();
-//        map.put("name","姓名");
-//        map.put("age","年龄");
-//        map.put("gender","性别");
-//        List<Person> list = new ArrayList<>();
-//        for (int i = 0; i < 10 ; i++) {
-//            list.add(new Person("123",i,"男"));
-//        }
-//        try {
-//            beanToExcel(map,list,"ceshi123","ceshi123.xls");
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        LinkedHashMap<String,String> map = new LinkedHashMap<>();
+        map.put("name","姓名");
+        map.put("age","年龄");
+        map.put("gender","性别");
+        List<Person> list = new ArrayList<>();
+        for (int i = 0; i < 10 ; i++) {
+            list.add(new Person("123",i,"男"));
+        }
+        try {
+            beanToExcel(map,list,"ceshi123","ceshi123.xls");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
