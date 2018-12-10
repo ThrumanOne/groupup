@@ -12,14 +12,13 @@
     <modules>
         <module>singletonDemo</module>
         <module>common</module>
-        <module>springcloudDemo</module>
         <module>multiDatasoureManagerDemo</module>
     </modules>
     <description>构建管理基础工程</description>
 
 
     <properties>
-        <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
+        <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
         <jedis.version>2.9.0</jedis.version>
     </properties>
 
@@ -62,6 +61,11 @@
                 <version>${spring-boot.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
 
 
 
@@ -172,12 +176,6 @@
             <!--<version>1.1.7</version>-->
         <!--</dependency>-->
 
-        <!-- Junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
 
     </dependencies>
 
