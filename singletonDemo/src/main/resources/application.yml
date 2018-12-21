@@ -6,9 +6,9 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://myaws:3306/crm
-    username: root
-    password: newPwd
+    url: jdbc:mysql://192.168.147.192:3306/pintuan?useSSL=false&useUnicode=true&characterEncoding=utf-8
+    username: pintuan
+    password: FJAOFbhS0sMzyZzY
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -55,5 +55,5 @@ mapper:
 
 
 #日志配置
-logging:
-  config: classpath:logback.xml
+#logging:
+#  config: classpath:logback.xml

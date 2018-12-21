@@ -1,5 +1,6 @@
 package com.thruman.dao.cluster;
 
+import com.thruman.pojo.ProductEntity;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +15,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CAddressMapper {
 
-    @Select("")
-    Object select();
+    @Select("select * from product where id = 1")
+    ProductEntity select();
 }

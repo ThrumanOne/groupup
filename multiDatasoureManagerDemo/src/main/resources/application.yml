@@ -11,15 +11,15 @@ spring:
           xa-data-source-class-name: com.alibaba.druid.pool.xa.DruidXADataSource
           xa-properties:
             driverClassName: com.mysql.jdbc.Driver
-            username: root
-            url: jdbc:mysql://myaws:3306/myth_account?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
-            password: "newPwd"
+            username: pintuan
+            url: jdbc:mysql://192.168.147.192:3306/pintuan?useSSL=false&useUnicode=true&characterEncoding=utf-8
+            password: FJAOFbhS0sMzyZzY
         clusterDataSource:
           unique-resource-name: order
           xa-data-source-class-name: com.alibaba.druid.pool.xa.DruidXADataSource
           xa-properties:
             driverClassName: com.mysql.jdbc.Driver
-            username: root
-            url: jdbc:mysql://myaws:3306/myth_order?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
-            password: "newPwd"
+            username: pintuan
+            url: jdbc:mysql://192.168.147.192:3306/pintuan?useSSL=false&useUnicode=true&characterEncoding=utf-8
+            password: FJAOFbhS0sMzyZzY
 

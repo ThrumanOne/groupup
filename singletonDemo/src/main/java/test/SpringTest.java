@@ -1,14 +1,13 @@
 package test;
 
 import com.thruman.Api;
-import com.thruman.dao.cluster.CAddressMapper;
+import com.thruman.dao.TestDao;
 import com.thruman.pojo.ProductEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.annotation.Resource;
 
 /**
  * 类说明
@@ -22,13 +21,14 @@ import javax.annotation.Resource;
 @RunWith(SpringRunner.class)
 public class SpringTest {
 
-    @Resource
-    CAddressMapper cAddressMapper;
+    @Autowired
+    TestDao testDao;
 
     @Test
     public void test(){
-        ProductEntity select = cAddressMapper.select();
-        System.out.print(select);
+
+        ProductEntity id = testDao.getProduct(1);
+        System.out.print(id);
 
 
     }

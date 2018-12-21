@@ -1,5 +1,6 @@
 package com.thruman.dao;
 
+import com.thruman.pojo.ProductEntity;
 import com.thruman.pojo.Test;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
@@ -12,7 +13,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TestDao {
 
-    @Select("select * from test where id = #{id}")
+    @Select("select * from product where id = #{id}")
     public Test getId(int id);
 
+
+    @Select("select * from product where id = #{id}")
+    public ProductEntity getProduct(int id);
 }
